@@ -1,8 +1,9 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app'
+import Config from "react-native-config"
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'api-key',
+  apiKey: Config.FIREBASE_API_KEY,
   authDomain: 'real-chair.firebaseapp.com',
   databaseURL: 'https://real-chair.firebaseio.com',
   projectId: 'real-chair',
