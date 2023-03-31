@@ -5,7 +5,7 @@ const WheelchairList = () => {
     const router = useRouter()
 
     onButtonPress = () => {
-        router.push("./app")
+        router.back()
     }
 
     return (
