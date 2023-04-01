@@ -1,21 +1,21 @@
-import {Button, StyleSheet, Text, View } from "react-native";
-import { useRouter } from "expo-router";
+import { Button, StyleSheet, Text, View } from "react-native"
+import { useRouter } from "expo-router"
 
 const WheelchairList = () => {
-    const router = useRouter()
+  const router = useRouter()
 
-    onButtonPress = () => {
-        router.back()
-    }
+  onButtonPress = () => {
+    router.back()
+  }
 
-    return (
+  return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Wheelchairs</Text>
         <Button onPress={onButtonPress} title="Go back" />
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
   },
-});
+})
 
 export default WheelchairList
