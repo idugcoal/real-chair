@@ -1,10 +1,11 @@
 {
   "expo": {
+    "jsEngine": "hermes",
+    "name": "real-chair",
     "scheme": "acme",
+    "slug": "real-chair",
     "web": {
       "bundler": "metro"
-    },
-    "name": "real-chair",
-    "slug": "real-chair"
+    }
   }
 }
