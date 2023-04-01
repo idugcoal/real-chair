@@ -2,21 +2,23 @@ import { Button, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 
 const Page = () => {
-  const router = useRouter()
-  
+  const router = useRouter();
+
   onButtonPress = () => {
-    router.push("./wheelchair_list")
-  }
+    router.push("./wheelchair_list");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>RealChair</Text>
-        <Text style={styles.subtitle}>Tracking wheelchairs with the power of Ben's balls.</Text>
+        <Text style={styles.subtitle}>
+          Tracking wheelchairs with the power of Ben's balls.
+        </Text>
         <Button title="Tap to start" onPress={onButtonPress} />
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -40,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Page
+export default Page;
