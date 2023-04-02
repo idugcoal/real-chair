@@ -6,7 +6,7 @@ import { useRouter } from "expo-router"
 import { firebaseConfig } from "../firebase"
 import { home } from "../assets/app_strings"
 
-const Page = () => {
+const Home = () => {
     const router = useRouter()
     const app = initializeApp(firebaseConfig)
 
@@ -22,7 +22,7 @@ const Page = () => {
     }
 
     onButtonPress = () => {
-        router.push("./wheelchair_list")
+        router.push("./select_task")
     }
 
     return (
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Page
+export default Home
