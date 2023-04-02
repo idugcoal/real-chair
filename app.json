@@ -1,11 +1,19 @@
 {
-  "expo": {
-    "jsEngine": "hermes",
-    "name": "real-chair",
-    "scheme": "acme",
-    "slug": "real-chair",
-    "web": {
-      "bundler": "metro"
+    "expo": {
+        "jsEngine": "hermes",
+        "name": "real-chair",
+        "plugins": [
+            [
+                "expo-barcode-scanner",
+                {
+                    "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+                }
+            ]
+        ],
+        "scheme": "acme",
+        "slug": "real-chair",
+        "web": {
+            "bundler": "metro"
+        }
     }
-  }
 }
