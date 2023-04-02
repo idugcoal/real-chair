@@ -24,6 +24,12 @@ const selectStopsNonSterile = {
 const selectStopsSterile = {
     title: "Select stops | Sterile",
 }
+const selectTask = {
+    title: "Select task",
+    buttonArrival: "Arrival",
+    buttonDeparture: "Departure",
+    buttonPreboard: "Preboard",
+}
 const startLocation = {
     title: "Starting location",
     buttonTitle: "Next",
@@ -45,6 +51,7 @@ export {
     selectGate,
     selectStopsNonSterile,
     selectStopsSterile,
+    selectTask,
     startLocation,
     tsa,
     wheelchairList,

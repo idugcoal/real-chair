@@ -22,7 +22,7 @@ const Home = () => {
     }
 
     onButtonPress = () => {
-        router.push("./wheelchair_list")
+        router.push("./select_task")
     }
 
     return (
