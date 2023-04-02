@@ -2,11 +2,11 @@ import { Button, StyleSheet, Text, View } from "react-native"
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getDatabase, ref, set } from "firebase/database"
-import { Link, Stack, useRouter } from "expo-router"
+import { Stack, useRouter } from "expo-router"
 import { firebaseConfig } from "../firebase"
 import { home } from "../assets/app_strings"
 
-const Home = () => {
+const App = () => {
     const router = useRouter()
     const app = initializeApp(firebaseConfig)
 
@@ -41,13 +41,13 @@ const Home = () => {
                         headerTitleStyle: {
                             fontWeight: "bold",
                         },
-                        // https://reactnavigation.org/docs/headers#replacing-the-title-with-a-custom-component
                     }}
                 />
-
                 <Text style={styles.title}>{home.title}</Text>
                 <Text style={styles.subtitle}>{home.subtitle}</Text>
-                <Button title={home.buttonTitle} onPress={onButtonPress} />
+                <View style={{ marginTop: 32 }}>
+                    <Button title={home.buttonTitle} onPress={onButtonPress} />
+                </View>
             </View>
         </View>
     )
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Home
+export default App

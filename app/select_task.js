@@ -1,8 +1,9 @@
 import { Pressable, StyleSheet, Text, View } from "react-native"
-import { useRouter } from "expo-router"
+import { Stack, useRouter } from "expo-router"
 import { selectTask } from "../assets/app_strings"
 
 const SelectTask = () => {
+    const strings = selectTask
     const router = useRouter()
 
     onButtonPress = () => {
@@ -20,21 +21,35 @@ const SelectTask = () => {
     return (
         <View style={styles.container}>
             <View style={styles.main}>
-                <Text style={styles.title}>{selectTask.title}</Text>
+                <Stack.Screen
+                    options={{
+                        title: strings.title,
+                        headerStyle: {
+                            backgroundColor: "#fff",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flex: 1,
+                        },
+                        headerTintColor: "#000",
+                        headerTitleStyle: {
+                            fontWeight: "bold",
+                        },
+                    }}
+                />
                 <View style={styles.buttons}>
                     <Pressable onPress={onArrivalPress} style={styles.button}>
                         <Text style={styles.buttonText}>
-                            {selectTask.buttonArrival}
+                            {strings.buttonArrival}
                         </Text>
                     </Pressable>
                     <Pressable onPress={onDeparturePress} style={styles.button}>
                         <Text style={styles.buttonText}>
-                            {selectTask.buttonDeparture}
+                            {strings.buttonDeparture}
                         </Text>
                     </Pressable>
                     <Pressable onPress={onDeparturePress} style={styles.button}>
                         <Text style={styles.buttonText}>
-                            {selectTask.buttonPreboard}
+                            {strings.buttonPreboard}
                         </Text>
                     </Pressable>
                 </View>
@@ -45,7 +60,7 @@ const SelectTask = () => {
 
 const styles = StyleSheet.create({
     buttons: {
-        marginTop: 32,
+        marginTop: 16,
     },
     button: {
         alignItems: "center",

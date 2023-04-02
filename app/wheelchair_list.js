@@ -1,7 +1,9 @@
 import { Button, StyleSheet, Text, View } from "react-native"
-import { useRouter } from "expo-router"
+import { Stack, useRouter } from "expo-router"
+import { wheelchairList } from "../assets/app_strings"
 
 const WheelchairList = () => {
+    const strings = wheelchairList
     const router = useRouter()
 
     onButtonPress = () => {
@@ -10,10 +12,22 @@ const WheelchairList = () => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.main}>
-                <Text style={styles.title}>Wheelchairs</Text>
-                <Button onPress={onButtonPress} title="Go back" />
-            </View>
+            <Stack.Screen
+                options={{
+                    title: strings.title,
+                    headerStyle: {
+                        backgroundColor: "#fff",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flex: 1,
+                    },
+                    headerTintColor: "#000",
+                    headerTitleStyle: {
+                        fontWeight: "bold",
+                    },
+                }}
+            />
+            <View style={styles.main}></View>
         </View>
     )
 }
