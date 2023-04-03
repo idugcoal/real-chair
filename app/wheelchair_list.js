@@ -25,7 +25,7 @@ const WheelchairList = () => {
 
     const buttons = buttonList.map((i) => {
         return (
-            <View style={styles.buttonView}>
+            <View style={styles.buttonView} key={`wheelchair-button-${i}`}>
                 <Pressable onPress={() => onPress(i)} style={styles.button}>
                     <Text style={styles.buttonText}>{i}</Text>
                 </Pressable>
